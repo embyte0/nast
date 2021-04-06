@@ -1,0 +1,74 @@
+#
+#  $Id: Makefile.in,v 1.2 2004/01/28 21:57:23 mastershadow Exp $
+#
+
+CC          = @CC@
+CFLAGS      = @CFLAGS@
+CPPFLAGS    = @CPPFLAGS@
+LDFLAGS     = @LDFLAGS@
+LIBS        = @LIBS@
+INSTALL     = @INSTALL@
+
+prefix      = @prefix@
+exec_prefix = @exec_prefix@
+bindir      = @bindir@
+mandir      = @mandir@
+datadir     = @datadir@
+srcdir      = @srcdir@
+shtool      = @SHTOOL@
+
+OBJS = main.o dev.o tcp.o icmp.o arp.o udp.o prom.o\
+       eth.o map.o sniff.o data.o rst.o fgw.o flink.o \
+       port.o common.o stream.o igmp.o bcount.o error.o\
+       ncurses/n_menu.o ncurses/n_scroll_win.o ncurses/n_comm.o \
+       ncurses/n_stream.o ncurses/n_conn.o ncurses/n_rst.o @NCURSES@ @GETOPT@\
+
+all:	nast	
+	
+world:	nast install	
+
+nast:	$(OBJS)
+	$(CC) $(CFLAGS) $(LDFLAGS) -o nast $(OBJS) $(LIBS) 
+	@echo
+	@echo "Done! Type make install from root"
+	@echo
+
+.c.o:
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+
+install:
+	chown root nast nast.8
+	cp -fR nast @bindir@
+	cp -fR nast.8 @mandir@/man8/
+	@echo
+	@echo "Run with nast (-h for help), enjoy!"
+	@echo "Use -G flag to run in ncurses interface"
+	@echo
+
+clean:
+	rm -f *~ ncurses/*~ *.bak *.o ncurses/*.o *.log nast config.status stamp-h* 
+	rm -rf *.cache
+
+distclean: clean
+	rm -f config.h Makefile
+
+version:
+	@echo
+	@cat VERSION
+	@echo
+
+love:
+	@echo "Not right now,i have a headcache..."
+
+help:
+	@echo
+	@echo "Accepted commands for Makefile:"
+	@echo "make		compile sources"
+	@echo "make install	install binary and manpage"
+	@echo "make world	compile and install"
+	@echo "make clean	clean trash files from current directory)"
+	@echo "make distclean	uninstall"
+	@echo "make version	show version"
+	@echo "make love	surprise"
+	@echo "make help	print this help"
+	@echo

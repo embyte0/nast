@@ -1,0 +1,37 @@
+============================================================================
+                     Nast - Network Analyzer Sniffer Tool       	  
+
+	     	  	   	README_NCURSES
+============================================================================
+
+Well, even if a lot of plugins are easy to use, some others are a little bit more
+complex. I will show you how to use 'em:
+
+--> USE HELP: Press "h" or select "Help" item from Options menu
+
+Tcp stream: 1) press "Shift + A" to use the analyzer functions
+            2) Select "TCP Stream" :-)
+	    3) Insert the source and destination IPs (or the names if you have a DNS)
+	       then press "Enter"
+	    4) Use the "UP key" or "DOWN key" to select a connection from the DataBase
+	       in the"Info Window"
+	    5) Press "Enter" to see the stream
+	       The stream will refresh itself when new data comes on the connection.    
+	    6) If you want to see more lines in the "Main Window" press "q", then "F2"
+	       and do as usual.
+	    7) If you want to select another connection from the DataBase in "Info Window"
+	       press "s" and go to point 4:)
+	       
+Reset connection:
+	    1) Go to point 1 of TCP Stream and change "TCP Stream" with " Reset 
+	       Connection":-)
+	       
+Sniffer options: 1) You MUST select the options of the sniffer (like "data", "hex" etc)
+                    BEFORE start the sniffer. If you want to change a options you 
+		    MUST restart the sniffer engine. 
+	     
+To stop applications as TCP Stream, Reset Connections and Byte Counting, use "Stop 
+Application" under "Options".
+
+That's all! Have fun;-)
+ 

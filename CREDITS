@@ -1,0 +1,41 @@
+============================================================================
+                    Nast - Network Analyzer Sniffer Tool          
+	     	  	   	    
+				    CREDITS
+============================================================================
+
+
+IN RANDOM ORDER SPECIAL THANKS TO:
+
+
+mydecay	  	<mydecay@spine-group.org>	For giving me a OpenBSD shell to test on. 
+						Author of ripper.
+						
+Kronos	        <kronos@kronoz.cjb.net>         For testing and patching beta versions.
+
+Nicola Bonelli  <awgn@antifork.org>		For autoconf support.
+
+Alberto Ornaghi <alor@users.sourceforge.net>	In order to have given ideas to me,  
+Marco Valleri   <crwm@freemail.it>		councils and to have tested the code.	
+      						Authors of ettercap.
+						A particular thx to Alor by Snifth
+						for all the code about scrolling windows
+						in ncurses mode. Ripped from lmap
+						(www.antifork.org)
+						
+click		<click@spine-group.org> 	For testing. SPINE members.
+Tabris          <Tabris@spine-group.org>
+
+Paul Dorman     <pdorman@ihug.co.nz>            For giving me excelents ideas
+
+Kirill Ponomarew <ponomarew@oberon.net>		FreeBSD port manteiner
+
+Michael Hostbaek <mich@freebsdcluster.org>	FreeBSD tester
+
+Uopa		 			   	For testing on FreeBSD 4.x
+
+Yonatan Bokovza <Yonatan@xpert.com>		For ispelling manpage
+
+Abaddon <abaddon@802.11ninja.net>		For the "make love" ;)
+
+University LAN :-)

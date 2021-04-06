@@ -1,0 +1,12 @@
+============================================================================
+                     Nast - Network Analyzer Sniffer Tool       	  
+
+	     	  	   	  Known BUGS
+============================================================================ 
+Checking promisc can have bad response, pay attention!
+
+Nast doesn't compile with gcc < 3. We must make more tests!
+
+Port scanner and some other plugins don't work with lo device yet. 
+
+In graphical mode the sniffer uses only 10000 lines before clean all and restart.

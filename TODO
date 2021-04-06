@@ -1,0 +1,25 @@
+============================================================================
+                   Nast - Network Analyzer Sniffer Tool 
+	     	  	   	    
+				    TODO
+============================================================================
+
+
+This file could change unexpectedly ;-)
+
+0.2.1
+=====
+implement tcpstream and rst for any connection
+add os fingerprinting
+rewrite port scanner
+rewrite psearch() routine
+add debug support
+write a cool connection tracking
+
+0.2.2
+=====
+sniff other packets (handle_DNS() for example)
+
+0.3.0
+=====
+GTK+ interface

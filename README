@@ -1,0 +1,80 @@
+============================================================================
+                     Nast - Network Analyzer Sniffer Tool       	  
+
+	     	  	   	    README
+============================================================================
+
+
+Required libraries:		
+===================	       
+
+Libnet  1.1.1 (*)
+Libpcap 0.8.1 (**)
+
+(Pthread support)
+
+(*)  www.packetfactory.net/libnet
+(**) www.tcpdump.org
+
+
+Raccomanded libraries:
+======================
+
+Libncurses (*)
+
+(*) www.gnu.org/software/ncurses/ncurses.html
+
+
+Installation:
+=============
+
+1) tar xvfz nast-x.y.z.tar.gz (*)
+2) cd nast-x.y.z
+3) ./configure (./configure --help for help)
+4) make (make help for help)
+5) make install (you must be root if you want to install in default prefix)
+
+Read accepted options with "nast -h" and run with "nast [options]".
+If you need help use manpage (nast(8)).
+
+(*) x.y.z is the release version.
+
+Ncurses, even they aren't necessary, are STRONGLY recommended for a better use 
+of the plugins, specially TCP stream and byte counting!
+
+
+Use:
+====
+The use of Nast under shell is quite easy and the man page should be enought.
+The use of Nast with Ncurses graphical interface is a little bit more complex, 
+so you should read the README_NCURSES for avoid problems (press "h" for
+runtime help)! 
+
+
+Disclaimer:
+===========
+
+There is no warranty, expressed or implied, associated with this tool.
+Use at your OWN risk.
+
+
+License:
+========
+
+GNU GENERAL PUBLIC LICENSE
+see COPYING file for details.
+
+
+Contact:
+========
+
+Website:    http://nast.berlios.de
+CVS:        http://www.spine-group.org/cgi-bin/cvsweb.cgi/
+Newsletter: http://lists.berlios.de/mailman/listinfo/nast-news
+Email:      Embyte <embyte@madlab.it> or Snifth <snifth@box.it>
+
+
+Bug:
+====
+
+Please report bug to Authors.

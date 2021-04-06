@@ -1,0 +1,129 @@
+==============================================================================
+                      Nast - Network Analyzer Sniffer Tool           
+	     	  	   	    
+				    Changelog
+==============================================================================
+
+
+0.2.0 Date: 04-01-07
+
+ ++ Completely rewritten ncurses graphical interface (-G flag) 
+ + Many improvements in graphical analyzer features:
+   + Connections handling for data stream sniffing and connection resetting
+   + Added new stats for byte counter
+   + Added dns resolution support
+   + Recoded a new errors handler
+   !! Fixed banner catcher
+ + Added tcpdump-format logging and loading    
+ + Added NCURSES_README file  
+
+
+0.1.7e     Date: 03-05-21
+
+ + Set promisc mode as default in sniffer
+ + Worked on libnet defines (now it compile on sparc64), Makefile.in and nast.8
+ !! Fixed a serious memory lack bug in map_lan() which frequently causes
+    segmentation faults
+    
+
+0.1.7d	   Date: 03-04-23
+
+ ++ Nast has been included in FreeBSD ports
+ + Ported to FreeBSD 4.x (tested on 4.6 and 4.7)
+ !! Fixed some importants bugs in configure.ac
+
+
+0.1.7      Date: 03-04-16
+
+ + Ported to FreeBSD 5 (tested on FreeBSD 5)
+ + Added logging support to car() and psearch() 
+ + Added two possible logging support to sniffing (-l and --ld)
+ + Added traffic monitoring feature (-C <"filter">) 
+ + Extended promiscous mode research to all network NIC (-P all)
+ + Added nast_hex_ntoa() to convert u_char[6] MAC address to "##:##:..##" form
+ + Added nast_atoda() to convert u_char[4] internet host address to 
+   "###.###.###.###" format
+ + Added a check on interfaces in main()
+ !! Breaked netmask limitation in map_lan(). Now Nast work with every netmask.
+ !! Breaked max host number limitation in map_lan(). Now Nast can search for
+    a limitless number of host using dynamic allocation.
+ !! Fixed (int) to_ms in pcap_open_live() (setting>0) to work with *BSD
+ !! Fixed a video output bug in car()
+ !! Fixed common return value (NULL) of map_lan() to distinguish no-host from
+    error
+ !! Worked on sniffer features (log, output, headers size, *buf offset, ..)
+ !! Much code has been modified in order to work exclusively on libnet making
+    it os-independent (all headers file has been deleted and includes have
+    been optimized)
+ !! Fixed a bug in logging support in port.c
+ !! Fixed a bug in mport() with telnet banner reader
+ !! Cleaned option parser in main()
+ !! Arranged manpage and compilation/installation procedure 
+
+
+0.1.6      Date: 03-02-17
+
+ + Added -B (--daemon) flag to demonize Nast
+ + Added -V (--verbose) flag to show version information
+ + Added long opt support
+ + Added signal() function
+ + Added IGMP support 
+ + Better implemented file logging
+ !! Completly rewritten arpreply() and something else in map_lan() becouse 
+    it didn't work very well
+ !! Fixed a wrong interpretation of flags in main()
+ !! Fixed a bug in resolve hostname with -P
+ !! Adjust usage()
+
+
+0.1.5.1	   Date: 03-01-27
+
+ + Added the control of ARP_RESPONSE so as to discover possible ARP-poisoning
+ !! Fixed the wrong IP bug of ARP_RESPONSE in handle_ARP()
+ !! Fixed a return bug in map_lan()
+ !! Corrected Changelog
+ !! Fixed a wrong printf in fgw()
+
+
+0.1.5	   Date: 03-01-02
+
+ ++ First public release...
+ + Log in a file functions reports
+ + Configure files
+ + README, COPYING, AUTHORS, Changelog, man-page added
+ 
+ 
+0.1.4
+
+ + Multi port scanner
+ + Follow TCP stream
+ + Catch daemon banner 
+ + Ncurses interface
+
+
+0.1.3
+
+ + Reset a connection
+ + HUB or SWITCH detection
+ + Find a gateway
+ !! Corrected Makefile
+
+
+0.1.2
+
+ + Mapping the LAN
+ + Single port scanner
+
+
+0.1.1
+
+ + Set a filter
+ + Log sniffer data in file
+ + Check promisc node in the LAN
+ + Add makefile
+
+
+0.1.0
+
+ + Sniff packets and print header
+ + Print ASCII ASCII-HEX data payload
