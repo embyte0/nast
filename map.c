@@ -166,7 +166,7 @@ struct host * map_lan(char *dev, u_short mode, u_short * n)
    /* print il localhost */
    if (mode)
      {
-	n_print ("princ",6,1,lg,"%s\t", nast_hex_ntoa (e->ether_addr_octet));
+	n_print ("princ",6,1,lg,"%s \t", nast_hex_ntoa (e->ether_addr_octet));
 	n_print ("princ",6,24,lg,"%s (%s) (*)\n",libnet_addr2name4(ip_src , 0),libnet_addr2name4(ip_src , LIBNET_RESOLVE));
      }
 
